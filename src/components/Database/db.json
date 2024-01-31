@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": "6513",
+      "name": "babavoss",
+      "email": "babavoss@test.com",
+      "password": "baba123"
+    },
+    {
+      "id": "3492",
+      "name": "ghgh",
+      "email": "baba@test.com",
+      "password": "h456"
+    },
+    {
+      "id": "63f5",
+      "name": "Mike",
+      "email": "bankole@test.com",
+      "password": "bank123"
+    },
+    {
+      "id": "3cbe",
+      "name": "Mike",
+      "email": "bankole@test.com",
+      "password": "bank123"
+    }
+  ]
+}
