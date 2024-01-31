@@ -45,7 +45,7 @@
         </li>
       </ul>
       <div class="d-flex" role="search">
-        <h4>Others</h4>
+        <button v-on:click="logout" class="btn btn-lg btn-info">Logout</button>
         <h4>Others</h4>
         <!-- <img src="../assets/Google Play Badge.png" class="img-fluid me-3" alt=""> -->
         <!-- <img src="../assets/App Store BadgeApple.png"  class="img-fluid" alt=""> -->
@@ -68,10 +68,20 @@
 </template>
 
 <script>
+
 import HomeView from './views/HomeView.vue';
+
 export default {
   components: {
     HomeView
+  },
+
+  methods: {
+
+      logout() {
+        localStorage.clear()
+        this.$router.push({name:'login'})
+      }
   }
 }
 

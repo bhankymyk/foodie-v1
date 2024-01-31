@@ -23,6 +23,12 @@
       "name": "Mike",
       "email": "bankole@test.com",
       "password": "bank123"
+    },
+    {
+      "id": "0910",
+      "name": "",
+      "email": "",
+      "password": ""
     }
   ]
 }

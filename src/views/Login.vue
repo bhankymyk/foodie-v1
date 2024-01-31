@@ -36,6 +36,7 @@
 
 <script>
     import axios from 'axios';
+    import {useToast} from 'vue-toastification'
 
     export default {
         data () {
@@ -46,6 +47,9 @@
         } ,
         methods: {
             async login () {
+
+
+                const toast = useToast();
 
                 let result = await axios.get(
                     `http://localhost:3000/user?email=${this.email}&password=${this.password}`
@@ -62,10 +66,20 @@
                 }
                 else {
           // Display incorrect password message or handle other errors
-          alert('Incorrect password ');
+        //   alert('Incorrect password ');
+        toast.error('Incorrect password or email');
         }
             }
-        } 
+        },
+        mounted () {
+            // Should redirect to homepage if user is not signed up
+            let user = localStorage.getItem('info');
+            if(user)
+            {
+                this.$router.push({name:'home'})
+            }
+        }
+
     }
 </script>
 
