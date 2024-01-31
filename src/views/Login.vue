@@ -17,10 +17,9 @@
                         <div class="login">
                             <label for="password">Password</label> <br>
                             <input type="password" v-model="password">
-                        </div>
-
+                        </div> 
                         <div class="login"> 
-                            <button  v-on:click="btn" class="btn btn-lg">Login</button>
+                            <button  v-on:click="login" class="btn btn-lg">Login</button>
                         </div>
 
                         <div class="div">
@@ -36,13 +35,37 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         data () {
             return {
                 email: '',
                 password: ''
             }
-        }  
+        } ,
+        methods: {
+            async login () {
+
+                let result = await axios.get(
+                    `http://localhost:3000/user?email=${this.email}&password=${this.password}`
+                )
+                console.log(result)
+
+                if(result.status===200  && result.data.length>0)
+                {
+                    
+                    // local staorage redirect to homepage after signup
+                    localStorage.setItem("info", JSON.stringify(result.data>0))
+                    this.$router.push({name:'home'})
+
+                }
+                else {
+          // Display incorrect password message or handle other errors
+          alert('Incorrect password ');
+        }
+            }
+        } 
     }
 </script>
 
