@@ -8,7 +8,7 @@
 
                 <h2>Login To Your Account</h2>
                 <div class="">
-                    <!-- <form action=""> -->
+                    <form action=""> 
                         <div class="login">
                             <label for="email">Email</label> <br>
                             <input type="text" v-model="email">
@@ -26,7 +26,7 @@
                             <h5>Don't have an account ? <router-link to="/signUp">Sign Up</router-link></h5>
                         </div>
 
-                    <!-- </form> -->
+                    </form>
                 </div>
             </div>
         </div>
@@ -59,24 +59,23 @@
                 if(result.status===200  && result.data.length>0)
                 {
                     
-                    // local staorage redirect to homepage after signup
-                    localStorage.setItem("info", JSON.stringify(result.data>0))
-                    this.$router.push({name:'home'})
+                    // local staorage redirect to homepage after logged in
+                    localStorage.setItem("info", JSON.stringify(result.data.length > 0 ? result.data[0] : null))
+                    this.$router.push({name:'homePage'})
 
                 }
                 else {
           // Display incorrect password message or handle other errors
-        //   alert('Incorrect password ');
         toast.error('Incorrect password or email');
         }
             }
         },
         mounted () {
-            // Should redirect to homepage if user is not signed up
+            // Should redirect to homepage if user is not logged in
             let user = localStorage.getItem('info');
             if(user)
             {
-                this.$router.push({name:'home'})
+                this.$router.push({name:'homePage'})
             }
         }
 

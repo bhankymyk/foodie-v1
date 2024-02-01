@@ -7,6 +7,12 @@
 
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <h2>Hello {{ name}}, welcome to homepage</h2> -->
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12 text-center">
         <h3>Find Your Comfort <br> Food Here</h3>
@@ -22,11 +28,10 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  // props: {
-  //   msg: String
-  // }
-}
+
+  name: 'Home',
+
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
