@@ -30,5 +30,27 @@
       "email": "",
       "password": ""
     }
+  ],
+  "restaurant": [
+    {
+      "name": "Captain Cook",
+      "location": "Ilorin",
+      "id": "3"
+    },
+    {
+      "name": "Abula",
+      "location": "Ikeja",
+      "id": "d10a"
+    },
+    {
+      "id": "ab63",
+      "name": "Abula",
+      "location": "Ikeja"
+    },
+    {
+      "id": "eac0",
+      "name": "Chop n Go",
+      "location": "Nassarawa"
+    }
   ]
 }

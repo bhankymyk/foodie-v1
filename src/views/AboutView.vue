@@ -1,5 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>About Us</h1>
+        <h5>Foodie is an online Restaurant Management app, 
+          it help users to add, update and delete an existing list of restaurant</h5>
+      </div>
+    </div>
   </div>
 </template>

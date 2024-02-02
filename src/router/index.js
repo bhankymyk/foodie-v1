@@ -4,6 +4,8 @@ import HomePage from '../views/HomePage.vue'
 import SignUp from '../views/SignUp.vue'
 import Login from '../views/Login.vue'
 import RegisterView from '../views/RegisterView.vue'
+import addRestaurant from '../views/addRestaurant.vue'
+import updateRestaurant from '../views/updateRestaurant.vue'
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: '/homePage',
     name: 'homePage',
     component: HomePage
+  },
+  {
+    path: '/addRestaurant',
+    name: 'addRestaurant',
+    component: addRestaurant
+  },
+  {
+    path: '/updateRestaurant/:id',
+    name: 'updateRestaurant',
+    component: updateRestaurant
   },
   {
     path: '/about',

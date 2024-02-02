@@ -1,34 +1,93 @@
 <template>
-    <div>
-        <h1>Hello {{ name }} welcome to homepage</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Hello {{ name }} welcome to homepage</h1>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered" border="3" >
+                    
+                        <tr>
+                            <td>Id</td>
+                            <td>Name</td>
+                            <td>Location</td>
+                            <td>Actions</td>
+                        </tr>
+                    
+                    <tr v-for="item in restaurant" :key="item.id">
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.location }}</td>
+                        <td> <router-link :to="'/updateRestaurant/'+item.id">Update Restaurant</router-link> </td>
+                        <td><button v-on:click="deleteRestaurant(item.id)" type="button" class="btn btn-lg btn-success" >Delete</button></td>
+                        </tr>
+                </table>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
+
     export default {
         data () {
     return {
-      name:''
+      name:'',
+      restaurant: []
     }
   },
 
-    mounted()
-   {
-      let user = localStorage.getItem('info');
+    methods: {
+      async  deleteRestaurant (id) {
+            let result = await axios.delete("http://localhost:3000/restaurant/"+id);     
+                if(result.status==200)
+               {
+                this.loadData()
+                }
+        },
+        async loadData() {
+            let user = localStorage.getItem('info');
       if(user) {
         this.name = JSON.parse(user).name;
 
       }
       else
       {
-        this.$router.push({name:'signUp'});
-      }
-  }
+        this.$router.push({name:'homePage'});
+      } 
 
-        
+      let result = await axios.get("http://localhost:3000/restaurant");
+      console.warn(result)
+      this.restaurant = result.data
+        }
+    },
+
+   async  mounted()
+   {
+      
+      this.loadData();  
+    }
     }
 </script>
 
 <style scoped>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+    }
 </style>
