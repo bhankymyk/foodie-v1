@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-md">
-                <h1>Hello {{ name }} welcome to homepage</h1>
+            <div class="col-md head">
+                <h4>Hello {{ name }} welcome to homepage</h4>
 
             </div>
         </div>
@@ -28,6 +28,7 @@
                 </table>
             </div>
         </div>
+        <p>Ps: You will find the add to restaurant icon when you toggle the menu.</p>
     </div>
 </template>
 
@@ -89,5 +90,8 @@ import axios from 'axios';
 
     th {
       background-color: #333;
+    }
+    p{
+        color: rgb(236, 72, 72);
     }
 </style>
