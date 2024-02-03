@@ -1,30 +1,30 @@
 <template>
-    <div class="container text-center">
-        <div class="row">
+    <div class="container d-flex justify-content-center">
+        <div class="row ">
             <div class="col">
-                <div class="mt-4">
+                <div class="mt-4 text-center">
                     <img src="../assets/Signup.png" class="img-fluid" alt="">
                 </div>
 
-                <h2>Sign Up Here</h2>
+                <h2 class="text-center">Sign Up Here</h2>
                 <div class="">
                     <!-- <form action=""> -->
                         <div class="signup">
                             <label for="name" class="">Name</label> <br>
-                            <input type="text" v-model="name">
+                            <input type="text" placeholder=" Enter your Name" v-model="name">
                         </div>
 
                         <div class="signup">
                             <label for="email">Email</label> <br>
-                            <input type="text" v-model="email">
+                            <input type="text" placeholder="Enter your Email" v-model="email">
                         </div>
 
                         <div class="signup">
                             <label for="password">Password</label> <br>
-                            <input type="password" v-model="password">
+                            <input type="password" placeholder="" v-model="password">
                         </div>
 
-                        <div class="signup"> 
+                        <div class="signup mt-3"> 
                             <button  v-on:click="btn" class="btn btn-lg">Sign Up</button>
                         </div>
 
@@ -96,24 +96,29 @@ import axios from 'axios';
 }
 .signup label{
     /* text-align: left; */
-    color: #42b983;
+    /* color: #42b983; */
+    color: #000;
+    margin-left: 10px;
 }
 .signup input{
     border: 1px solid #42b983;
-    border-radius: 25px;
-    background: #A3A3A3;
+    border-radius: 15px;
+    /* background: #A3A3A3; */
     color: white;
     width: 300px;
     height: 40px;
     padding: 10px;
+    font-size: 15px;
 }
 button{
     /* color: #42b983; */
     background-color: #42b983;
     padding: 10px 20px;
-    font-size: 20px;
-    width: 200px;
-    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    color: #fff;
+    margin-left: 10px;
 }
 button:hover{
   background: #3cb8a1;
@@ -121,6 +126,9 @@ button:hover{
 a {
   text-decoration: none;
   color: #42b983;
+}
+input::placeholder {
+  text-align: center;
 }
 
 </style>

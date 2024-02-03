@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="row small-screen mb-5 text-center">
+  <div class="container small-screen">
+    <div class="row  mb-5 text-center">
       <img src="" alt="">
       <img src="../assets/Illustartion.png" class="img-fluid" alt="">
       <div class="col">
@@ -55,7 +55,8 @@ a {
 
 @media only screen and (max-width: 767px) {
   .small-screen {
-    background-image: url("../assets/Pattern.png");
+    background: url("../assets/Pattern.png");
+    height: 100vh;
   }
 }
 </style>

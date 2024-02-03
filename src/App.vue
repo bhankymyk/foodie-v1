@@ -4,7 +4,7 @@
     <!-- NavBar -->
     <div class="row">
       <div class="col">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <div class="nav-item">
@@ -116,4 +116,15 @@ nav a.router-link-exact-active {
 .nav-item a {
   text-decoration: none;
 }
+.navbar {
+  background-color: #fff;
+}
+/* .bg-body-tertiary{
+  --bs-bg-opacity: 1;
+  background-color: white !important;
+} */
+/* .bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+} */
 </style>
