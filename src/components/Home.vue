@@ -15,8 +15,8 @@
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
-        <h3>Find Your Comfort <br> Food Here</h3>
-        <p>Here you can find a dish for every <br> taste or color you want. !Enjoy</p>
+        <h3>Find Restaurant Management<br> made easy as pie</h3>
+        <p> Very easy to add, update and <br> delete a restaurant. !Enjoy</p>
         <button class="btn btn-lg" type="button">
           <router-link to="/signUp">Next</router-link></button>
       </div>
