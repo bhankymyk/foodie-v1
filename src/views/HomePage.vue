@@ -44,7 +44,7 @@ import axios from 'axios';
 
     methods: {
       async  deleteRestaurant (id) {
-            let result = await axios.delete("http://localhost:3000/restaurant/"+id);     
+            let result = await axios.delete("https://foodieapi-u2rl.onrender.com/restaurant/"+id);     
                 if(result.status==200)
                {
                 this.loadData()
@@ -61,7 +61,7 @@ import axios from 'axios';
         this.$router.push({name:'homePage'});
       } 
 
-      let result = await axios.get("http://localhost:3000/restaurant");
+      let result = await axios.get("https://foodieapi-u2rl.onrender.com/restaurant");
       console.warn(result)
       this.restaurant = result.data
         }

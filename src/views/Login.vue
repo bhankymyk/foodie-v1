@@ -52,7 +52,7 @@
                 const toast = useToast();
 
                 let result = await axios.get(
-                    `http://localhost:3000/user?email=${this.email}&password=${this.password}`
+                    `https://foodieapi-u2rl.onrender.com/user?email=${this.email}&password=${this.password}`
                 )
                 console.log(result)
 

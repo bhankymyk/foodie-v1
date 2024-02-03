@@ -58,7 +58,7 @@ import axios from 'axios';
         methods: {
            async btn() 
            {
-                let result = await axios.post("http://localhost:3000/user", {
+                let result = await axios.post("https://foodieapi-u2rl.onrender.com/user", {
                     name:this.name,
                     email:this.email,
                     password:this.password

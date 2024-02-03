@@ -35,7 +35,7 @@ import axios from 'axios'
            async updateRestaurant() {
                     // console.log(this.Restaurant)
 
-                    const result =await axios.put("http://localhost:3000/restaurant/"+this.$route.params.id,{
+                    const result =await axios.put("https://foodieapi-u2rl.onrender.com/restaurant/"+this.$route.params.id,{
                          name:this.Restaurant.name,
                          location:this.Restaurant.location
                     });
@@ -55,7 +55,7 @@ import axios from 'axios'
                 // if(user) {
                 //     this.$router.push({name: 'signUp'})
                 // }
-                const result = await axios.get('http://localhost:3000/restaurant/'+this.$route.params.id)
+                const result = await axios.get('https://foodieapi-u2rl.onrender.com/restaurant/'+this.$route.params.id)
                 console.log(result.data)
                 this.Restaurant=result.data
             }

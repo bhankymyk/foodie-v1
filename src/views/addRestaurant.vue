@@ -33,7 +33,7 @@ import axios from 'axios'
         methods: {
            async addRestaurant() {
                     console.log(this.Restaurant)
-                    const result =await axios.post("http://localhost:3000/restaurant", {
+                    const result =await axios.post("https://foodieapi-u2rl.onrender.com/restaurant", {
                          name:this.Restaurant.name,
                          location:this.Restaurant.location
                     });
